@@ -43,7 +43,7 @@ def getNumberOfCharacters(text: str) -> int:
 def getNumberOfSentences(text: str) -> int:
     sentenceAmount = 0
     for letter in text:
-        if letter == ".":
+        if letter in ['.', '?', '!']:
             sentenceAmount += 1
     return sentenceAmount
 
