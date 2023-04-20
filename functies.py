@@ -56,3 +56,24 @@ def getNumberOfWords(text: str) -> int:
             newText.pop()
 
     return len(newText)
+
+def getAVI(text: str) -> int:
+    words = getNumberOfWords(text)
+    sentences = getNumberOfSentences(text)
+
+    AVG = words/sentences
+
+    AVG = round(AVG)
+    if AVG <= 7:
+        return 5
+    elif AVG == 8:
+        return 6
+    elif AVG == 9:
+        return 7
+    elif AVG == 10:
+        return 8
+    elif AVG == 11:
+        return 11
+    elif AVG > 11:
+        return 12
+
