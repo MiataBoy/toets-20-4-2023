@@ -51,11 +51,14 @@ def getNumberOfSentences(text: str) -> int:
 def getNumberOfWords(text: str) -> int:
     text = text.replace("\n", " ")
     newText = text.split(" ")
+
+    falseWords = 0
     for word in newText:
         if word == '' or len(word) < 2:
-            newText.pop()
+            falseWords += 1
 
-    return len(newText)
+    print(newText)
+    return len(newText) - falseWords
 
 def getAVI(text: str) -> int:
     words = getNumberOfWords(text)
